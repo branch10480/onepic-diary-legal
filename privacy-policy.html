@@ -16,12 +16,39 @@
 
     <h2>2. 収集するデータ</h2>
 
-    <h3>2.1 デバイス識別子（広告ID）</h3>
+    <h3>2.1 広告関連データ（Google AdMob）</h3>
+    <p>本アプリの無料版では Google AdMob を利用して広告を配信しています。AdMob SDK は以下のデータを収集する場合があります。Pro プランをご利用の場合、広告は表示されず、これらのデータの収集も行われません。</p>
+
+    <h4>デバイス識別子（広告ID）</h4>
     <ul>
-      <li><strong>目的</strong>: Google AdMob による広告配信</li>
-      <li><strong>詳細</strong>: App Tracking Transparency（ATT）の許可状況に応じて使用されます。許可された場合はパーソナライズ広告、拒否された場合は非パーソナライズ広告が表示されます。Pro プランをご利用の場合、広告は表示されず、デバイス識別子も使用されません。</li>
+      <li><strong>目的</strong>: 広告配信・アナリティクス</li>
+      <li><strong>詳細</strong>: App Tracking Transparency（ATT）の許可状況に応じて使用されます。許可された場合はパーソナライズ広告、拒否された場合は非パーソナライズ広告が表示されます。</li>
+      <li><strong>ユーザーとの紐付け</strong>: あり</li>
+      <li><strong>トラッキング</strong>: ATT 許可時のみ</li>
+    </ul>
+
+    <h4>おおよその位置情報</h4>
+    <ul>
+      <li><strong>目的</strong>: 広告配信・アナリティクス</li>
+      <li><strong>詳細</strong>: IP アドレスからデバイスの大まかな位置を推定し、広告のターゲティングに使用されます。</li>
+      <li><strong>ユーザーとの紐付け</strong>: あり</li>
+      <li><strong>トラッキング</strong>: なし</li>
+    </ul>
+
+    <h4>広告データ・製品の操作</h4>
+    <ul>
+      <li><strong>目的</strong>: 広告配信・アナリティクス</li>
+      <li><strong>詳細</strong>: ユーザーが閲覧した広告の記録や、広告へのインタラクション情報が収集されます。</li>
+      <li><strong>ユーザーとの紐付け</strong>: あり</li>
+      <li><strong>トラッキング</strong>: なし</li>
+    </ul>
+
+    <h4>診断データ</h4>
+    <ul>
+      <li><strong>目的</strong>: アナリティクス・広告品質の改善</li>
+      <li><strong>詳細</strong>: パフォーマンスデータ、クラッシュデータ、その他の診断データが SDK の動作改善のために収集される場合があります。</li>
       <li><strong>ユーザーとの紐付け</strong>: なし</li>
-      <li><strong>トラッキング</strong>: ATT 許可時のみ（Pro プランでは広告自体が非表示）</li>
+      <li><strong>トラッキング</strong>: なし</li>
     </ul>
 
     <h3>2.2 購入履歴</h3>
@@ -35,7 +62,13 @@
     <h3>2.3 写真・テキスト（日記データ）</h3>
     <ul>
       <li><strong>目的</strong>: 日記機能の提供</li>
-      <li><strong>詳細</strong>: ユーザーが撮影・選択した写真とテキストは、端末内にのみ保存されます。外部サーバーへの送信は一切行いません。</li>
+      <li><strong>詳細</strong>: ユーザーが撮影・選択した写真とテキストは、端末および iCloud（有効な場合）に保存されます。開発者が管理するサーバーへの送信は一切行いません。</li>
+    </ul>
+
+    <h3>2.5 通知</h3>
+    <ul>
+      <li><strong>目的</strong>: リマインダー機能</li>
+      <li><strong>詳細</strong>: ユーザーが設定した時刻にローカル通知で日記の記録をリマインドします。通知の許可はユーザーの任意であり、通知に関するデータが外部に送信されることはありません。</li>
     </ul>
 
     <h3>2.4 生体認証データ</h3>
@@ -51,7 +84,7 @@
     <h2>4. 第三者へのデータ提供</h2>
     <p>本アプリは以下の第三者サービスを利用しています。</p>
     <ul>
-      <li><strong>Google AdMob</strong>: 広告配信のため、デバイス識別子が Google に提供される場合があります。Pro プランでは広告が非表示となり、デバイス識別子の提供も行われません。詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a>をご確認ください。</li>
+      <li><strong>Google AdMob</strong>: 広告配信のため、デバイス識別子・おおよその位置情報・広告データ・診断データ等が Google に提供される場合があります（詳細はセクション 2.1 を参照）。Pro プランでは広告が非表示となり、これらのデータ提供も行われません。詳細は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a>をご確認ください。</li>
     </ul>
     <p>上記以外の第三者にユーザーデータを提供・販売することはありません。</p>
 
